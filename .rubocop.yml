@@ -1,0 +1,36 @@
+AllCops:
+  TargetRubyVersion: 2.2
+
+Documentation:
+  Enabled: false
+OrderedGems:
+  Enabled: false
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+# Do not use Rubocop to enforce complexity rules, these will me
+# managed via the PR prorcess to not let in clearly complex code.
+Metrics/ClassLength:
+  Enabled: false
+Metrics/ModuleLength:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+Metrics/BlockNesting:
+  Enabled: false
+Metrics/AbcSize:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Enabled: false
+Metrics/ParameterLists:
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: false
+Metrics/PerceivedComplexity:
+  Enabled: false
+Metrics/LineLength:
+  Enabled: false
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
