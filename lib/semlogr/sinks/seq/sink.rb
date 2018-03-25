@@ -40,7 +40,8 @@ module Semlogr
           return unless opts[:flush_at_exit]
 
           at_exit do
-            Timeout.timeout(60) { buffer_flush(final: true) }
+            timeout = opts[:flush_at_exit_timeout] || 60
+            Timeout.timeout(timeout) { buffer_flush(final: true) }
           end
         end
 
