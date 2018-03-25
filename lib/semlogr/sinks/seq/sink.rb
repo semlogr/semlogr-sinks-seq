@@ -10,8 +10,10 @@ module Semlogr
         include Stud::Buffer
 
         def initialize(opts = {})
-          default_options = { flush_at_exit: true }
-          opts = default_options.merge(opts)
+          opts = {
+            flush_at_exit: true,
+            flush_at_exit_timeout: 60
+          }.merge(opts)
 
           @formatter = ClefFormatter.new(opts)
           @client = create_client(opts)
@@ -40,7 +42,7 @@ module Semlogr
           return unless opts[:flush_at_exit]
 
           at_exit do
-            timeout = opts[:flush_at_exit_timeout] || 60
+            timeout = opts[:flush_at_exit_timeout]
             Timeout.timeout(timeout) { buffer_flush(final: true) }
           end
         end
