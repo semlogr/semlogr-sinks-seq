@@ -10,11 +10,12 @@ module Semlogr
         include Stud::Buffer
 
         def initialize(opts = {})
-          opts = {
+          default_opts = {
             flush_at_exit: true,
             flush_at_exit_timeout: 60
-          }.merge(opts)
+          }
 
+          opts = default_opts.merge(opts)
           @formatter = ClefFormatter.new(opts)
           @client = create_client(opts)
 
