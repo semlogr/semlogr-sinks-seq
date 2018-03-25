@@ -46,8 +46,8 @@ module Semlogr
           return unless opts[:flush_at_exit]
 
           at_exit do
-            timeout = opts[:flush_at_exit_timeout]
-            Timeout.timeout(timeout) { buffer_flush(final: true) }
+            flush_timeout = opts[:flush_at_exit_timeout]
+            Timeout.timeout(flush_timeout) { buffer_flush(final: true) }
           end
         end
 
