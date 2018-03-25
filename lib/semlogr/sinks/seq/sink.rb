@@ -10,6 +10,7 @@ module Semlogr
         include Stud::Buffer
 
         def initialize(opts = {})
+          default_options = { flush_at_exit: true }
           opts = default_options.merge(opts)
 
           @formatter = ClefFormatter.new(opts)
@@ -34,12 +35,6 @@ module Semlogr
         end
 
         private
-
-        def default_options
-          {
-            flush_at_exit: true
-          }
-        end
 
         def exit_handler_initialize(opts)
           return unless opts[:flush_at_exit]
