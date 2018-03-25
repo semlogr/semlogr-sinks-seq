@@ -9,14 +9,10 @@ module Semlogr
       class Sink
         include Stud::Buffer
 
-        def initialize(opts = {})
-          default_opts = {
-            flush_at_exit: true,
-            flush_at_exit_timeout: 60
-          }
-
+        def initialize(formatter: ClefFormatter.new, **opts)
           opts = default_opts.merge(opts)
-          @formatter = ClefFormatter.new(opts)
+
+          @formatter = formatter
           @client = create_client(opts)
 
           exit_handler_initialize(opts)
@@ -38,6 +34,13 @@ module Semlogr
         end
 
         private
+
+        def default_opts
+          {
+            flush_at_exit: true,
+            flush_at_exit_timeout: 60
+          }
+        end
 
         def exit_handler_initialize(opts)
           return unless opts[:flush_at_exit]
