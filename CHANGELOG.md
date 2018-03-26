@@ -1,17 +1,10 @@
 # Changelog
 
-### 0.2.1
-
-- Use new semlogr component registry
-
-### 0.1.3
-
-- Rubocop update (nothing useful)
-
-### 0.1.2
-
-- Remove dependency on logstash-logger and implement connection and queue using ruby-stud
-
 ### 0.1.1
+
+- Add clef formatter instead of tacking onto existing JSON formatter
+- Adding support to flush buffer on application exit so that we don't lose messages
+
+### 0.1.0
 
 - Initial release

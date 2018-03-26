@@ -9,11 +9,11 @@ module Semlogr
       class Sink
         include Stud::Buffer
 
-        def initialize(formatter: nil, client: nil, **opts)
+        def initialize(client: nil, formatter: nil, **opts)
           opts = default_opts.merge(opts)
 
-          @formatter = formatter || ClefFormatter.new
           @client = client || create_client(opts)
+          @formatter = formatter || ClefFormatter.new
 
           exit_handler_initialize(opts)
           buffer_initialize(opts)
