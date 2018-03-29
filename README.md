@@ -1,4 +1,4 @@
-![Codeship Status for semlogr/semlogr](https://codeship.com/projects/9677cdd0-8768-0134-57f3-36c2ccf79a16/status?branch=master)
+![Codeship Status for semlogr/semlogr-sinks-seq](https://codeship.com/projects/f9d58b10-15c6-0136-e7ad-1a0f3e5cdd95/status?branch=master)
 
 # Seq sink for Semlogr
 
