@@ -1,5 +1,9 @@
 # Changelog
 
+### 0.1.2
+
+- Fix rookie mistake which broke logging of errors
+
 ### 0.1.1
 
 - Add clef formatter instead of tacking onto existing JSON formatter

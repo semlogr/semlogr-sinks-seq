@@ -30,10 +30,10 @@ module Semlogr
 
         def add_error(event, error)
           return unless error
-          event['@x'] = "#{error[:type]}: #{error[:message]}"
+          event['@x'] = "#{error.class}: #{error.message}"
 
-          return unless error[:backtrace] && error[:backtrace].any?
-          event['@x'] += "\n\s\s#{error[:backtrace].join("\n\s\s")}"
+          return unless error.backtrace && error.backtrace.any?
+          event['@x'] += "\n\s\s#{error.backtrace.join("\n\s\s")}"
         end
 
         def add_properties(event, properties)
