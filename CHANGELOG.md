@@ -1,5 +1,9 @@
 # Changelog
 
+### 0.1.3
+
+- Downgrade to faraday 0.13 to help compatibility
+
 ### 0.1.2
 
 - Fix rookie mistake which broke logging of errors
