@@ -1,5 +1,9 @@
 # Changelog
 
+### 0.1.4
+
+- Downgrade to faraday 0.12 grrr
+
 ### 0.1.3
 
 - Downgrade to faraday 0.13 to help compatibility
