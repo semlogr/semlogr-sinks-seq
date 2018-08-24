@@ -1,5 +1,9 @@
 # Changelog
 
+### 0.1.5
+
+- Fix faraday include as it clashed with the new semlogr-faraday module
+
 ### 0.1.4
 
 - Downgrade to faraday 0.12 grrr

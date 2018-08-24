@@ -10,7 +10,7 @@ module Semlogr
         end
 
         def post_events(payload)
-          connection = Faraday.new(url: @server_url) do |c|
+          connection = ::Faraday.new(url: @server_url) do |c|
             c.request   :retry
             c.response  :raise_error
             c.adapter   :net_http
