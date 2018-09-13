@@ -1,5 +1,9 @@
 # Changelog
 
+### 0.1.6
+
+- Move to use the batching sink provided as part of the Semlogr core.
+
 ### 0.1.5
 
 - Fix faraday include as it clashed with the new semlogr-faraday module
