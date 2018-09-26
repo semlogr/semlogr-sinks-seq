@@ -7,4 +7,8 @@
 /pkg/
 /spec/reports/
 /tmp/
-.tags*
+/.tags*
+
+# Codeship
+codeship-env
+codeship.aes

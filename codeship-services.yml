@@ -1,5 +1,6 @@
 build:
-  image: ruby:2.5
-  working_dir: /app
+  build:
+    dockerfile: build/Dockerfile
   volumes:
-    - ./:/app
+    - ./coverage:/build/coverage
+  encrypted_env_file: codeship-env.encrypted
