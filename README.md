@@ -1,4 +1,6 @@
 ![Codeship Status for semlogr/semlogr-sinks-seq](https://codeship.com/projects/f9d58b10-15c6-0136-e7ad-1a0f3e5cdd95/status?branch=master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/fffee3ba60898aa5f437/maintainability)](https://codeclimate.com/github/semlogr/semlogr-sinks-seq/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/fffee3ba60898aa5f437/test_coverage)](https://codeclimate.com/github/semlogr/semlogr-sinks-seq/test_coverage)
 
 # Seq sink for Semlogr
 
