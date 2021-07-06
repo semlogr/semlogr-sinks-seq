@@ -6,7 +6,7 @@ module Semlogr
   module Sinks
     module Seq
       def self.new(opts = {})
-        Sink.new(opts)
+        Sink.new(**opts)
       end
     end
 

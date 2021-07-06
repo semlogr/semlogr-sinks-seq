@@ -18,7 +18,7 @@ module Semlogr
 
           connection.post('/api/events/raw') do |req|
             req.headers['Content-Type'] = 'application/vnd.serilog.clef'
-            req.headers['X-Api-Key'] = @api_key if @api_key
+            req.headers['X-Seq-ApiKey'] = @api_key if @api_key
 
             req.body = payload
           end
